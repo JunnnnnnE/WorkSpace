@@ -1,0 +1,11 @@
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS `t_member`;
+SET FOREIGN_KEY_CHECKS = 1;
+
+CREATE TABLE `t_member` (
+    `id` varchar2(10) NOT NULL,
+    `pw` varchar2(10) NOT NULL,
+    `name` varchar2(20) NOT NULL,
+    `Column1` INTEGER NOT NULL,
+    PRIMARY KEY (`id`)
+);

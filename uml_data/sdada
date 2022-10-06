@@ -1,0 +1,28 @@
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS `member`;
+DROP TABLE IF EXISTS `buy`;
+SET FOREIGN_KEY_CHECKS = 1;
+
+CREATE TABLE `member` (
+    `mem_id` char(8) NOT NULL,
+    `mem_name` varchar(10) NOT NULL,
+    `mem_number` int NOT NULL,
+    `addr` char(2) NOT NULL,
+    `phone1` char(3),
+    `phone2` char(8),
+    `height` SMALLINT NOT NULL,
+    `debut_date` DATE NOT NULL,
+    PRIMARY KEY (`mem_id`)
+);
+
+CREATE TABLE `buy` (
+    `num` INT NOT NULL,
+    `mem_id` CHAR(8) NOT NULL,
+    `prod_name` CHAR(6) NOT NULL,
+    `group_name` CHAR(4),
+    `price` INT NOT NULL,
+    `amount` SMALLINT NOT NULL,
+    PRIMARY KEY (`num`)
+);
+
+ALTER TABLE `buy` ADD FOREIGN KEY (`mem_id`) REFERENCES `member`(`mem_id`);
