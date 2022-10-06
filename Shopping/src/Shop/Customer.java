@@ -1,5 +1,6 @@
 package Shop;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Customer {
@@ -13,6 +14,20 @@ public class Customer {
     private List<String> orderList; // 회원 주문리스트
     private int orderCount; // 회원 주문수량
     private int memNo;
+    
+    public Customer () {}
+    public Customer (String id, String pw, String name, String address, String phone, String email) {
+    	this.id = id;
+    	this.pw = pw;
+    	this.name = name;
+    	this.address = address;
+    	this.phoneNumber = phone;
+    	this.email = email;
+    	wishList = new ArrayList<String>();
+    	orderList = new ArrayList<String>();
+    	orderCount = 0;
+    	memNo = -1;
+    }
 
     // Getter and Setter ---------------------------
     public String getId() {

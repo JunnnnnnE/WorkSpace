@@ -16,7 +16,7 @@ public class ManageProduct {
         return list;
     }
 
-    public void registProduct (String name){
-        productlist.Add(name);
+    public void registProduct (String name, int price, int stock){
+        productlist.Add(name, price, stock);
     }
 }

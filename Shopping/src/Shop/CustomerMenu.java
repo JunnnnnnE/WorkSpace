@@ -9,7 +9,6 @@ public class CustomerMenu {
     Customer customer;
 
     public CustomerMenu() {
-        customer = new Customer();
     }
     // Getter and Setter ---------------------------
     public List<String> getMenuList() {
@@ -52,8 +51,10 @@ public class CustomerMenu {
     }
 
     public void showProductList() {
-        ManageProduct temp = new ManageProduct();
-        for (int i=0; i<temp.productlist. )
+    	ProductList prodList = new ProductList();
+    	List<String> list = new ArrayList<String>();
+    	list = prodList.getProductList();
+    	System.out.println(list);
     }
 
     public void searchProduct (String product){

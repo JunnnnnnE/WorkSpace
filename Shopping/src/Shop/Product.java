@@ -5,9 +5,16 @@ public class Product {
     private int price;  // 상품가격
     private int stock;  // 재고
 
-    public Product() {
-
+    public Product () {
+    	
     }
+    
+    public Product (String name, int price, int stock) {	// 생성자
+    	this.name  = name;
+    	this.price = price;
+    	this.stock = stock;
+    }
+    
     // Getter and Setter ---------------------------
     public String getName() {
         return name;
@@ -30,9 +37,5 @@ public class Product {
         this.price = price;
     }
 
-
     // ---------------------------------------------
-
-
-
 }
